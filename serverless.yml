@@ -11,14 +11,16 @@ provider:
   environment:
     DUMMY_API_KEY: 'Dummy value'
 
-  stage: dev
+  stage: ${env:NODE_ENV, 'Production'} # If first is undefined, it defaults to second
   region: eu-central-1
 
 functions:
   hello:
     handler: handler.hello
+    memorySize: 512 # MB
+    timeout: 30 # seconds
     environment:
-      DUMMY_API_KEY: 'New Dummy value'
+      DUMMY_API_KEY: ${env:DUMMY_API_KEY, 'Default'}
     events:
       - httpApi:
           path: /
