@@ -2,6 +2,7 @@
 
 Beginners guide to setting up AWS Lambda API with Serverless Framework, Node.js, TypeScript and more.
 
+[Read Full Article](https://mirzaleka.medium.com/getting-started-with-aws-lambda-serverless-framework-f06b50052cb0)
 
 ## Getting Started
 
@@ -44,4 +45,3 @@ Deploy to production (to your AWS account)
 
 Upon deploying, AWS will wire up all of the resources in a CloudFormation stack, expose API Gateway endpoints and setup CloudWatch for monitoring.
 
-Full Guide - Medium (Coming 12/29/22)
