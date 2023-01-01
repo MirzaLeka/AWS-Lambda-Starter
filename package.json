@@ -24,6 +24,8 @@
     "@middy/core": "^4.0.9",
     "@middy/error-logger": "^4.0.9",
     "@middy/http-error-handler": "^4.0.9",
+    "@middy/http-header-normalizer": "^4.0.9",
+    "@middy/http-json-body-parser": "^4.0.9",
     "aws-lambda": "^1.0.7",
     "http-errors": "^2.0.0"
   }

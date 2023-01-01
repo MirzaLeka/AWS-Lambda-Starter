@@ -3,6 +3,8 @@ service: my-first-serverless-app
 
 frameworkVersion: '3'
 
+useDotenv: true # must be set to read from .env file
+
 provider:
   name: aws
   runtime: nodejs16.x
@@ -10,6 +12,7 @@ provider:
     cors: true
   environment:
     DUMMY_API_KEY: 'Dummy value'
+    SECRET_API_KEY: ${env:SECRET_API_KEY} # points to variable in .env file
 
   stage: ${env:NODE_ENV, 'Production'} # If first is undefined, it defaults to second
   region: eu-central-1
